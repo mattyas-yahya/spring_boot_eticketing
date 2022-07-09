@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8" />
+</head>
+<body >
+<section layout:fragment="header">
+<!--  <h1>-->
+<!--    Dashboard-->
+<!--    <small>Control panel</small>-->
+<!--  </h1>-->
+
+  <iframe
+          src="http://localhost:3000/public/dashboard/335141a1-eaad-4993-a1b9-8c4ea0c98aa1"
+          frameborder="0"
+          width="1600"
+          height="1600"
+          allowtransparency
+  ></iframe>
+<!--  <ol class="breadcrumb">-->
+<!--    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
+<!--    <li class="active">Dashboard</li>-->
+<!--  </ol>-->
+<!--</section>-->
+<!--<h2 id="nx"></h2>-->
+<!--<h2 id="nc"></h2>-->
+<!--<div layout:fragment="content">-->
+<!--  <table  class="table table-striped table-bordered table-hover"  cellspacing="0"-->
+<!--         width="100%" role="grid" aria-describedby="example_info"-->
+<!--         style="width: 100%;">-->
+<!--      <tr>&lt;!&ndash; Info Boxes Style 2 &ndash;&gt;-->
+<!--        <td>-->
+<!--      <div class="info-box bg-yellow">-->
+<!--        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>-->
+
+<!--        <div class="info-box-content">-->
+<!--          <span class="info-box-text">Total Orders</span>-->
+<!--          <h2 id="total_inv" class="info-box-number"></h2>-->
+
+<!--          <div class="progress">-->
+<!--            <div class="progress-bar" style="width: 50%"></div>-->
+<!--          </div>-->
+<!--          <span class="progress-description">-->
+
+<!--                  </span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--      </div>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--      &lt;!&ndash; /.info-box &ndash;&gt;-->
+<!--      <div class="info-box bg-green">-->
+<!--        <span class="info-box-icon"><i class="ion ion-ios-build-outline"></i></span>-->
+<!--        <div class="info-box-content">-->
+<!--          <span class="info-box-text">Mentions</span>-->
+<!--          <span class="info-box-number">92,050</span>-->
+
+<!--          <div class="progress">-->
+<!--            <div class="progress-bar" style="width: 20%"></div>-->
+<!--          </div>-->
+<!--          <span class="progress-description">-->
+<!--                    20% Increase in 30 Days-->
+<!--                  </span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--      </div>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--      &lt;!&ndash; /.info-box &ndash;&gt;-->
+<!--      <div class="info-box bg-red">-->
+<!--        <span class="info-box-icon"><i class="ion ion-ios-cloud-download-outline"></i></span>-->
+
+<!--        <div class="info-box-content">-->
+<!--          <span class="info-box-text">Downloads</span>-->
+<!--          <span class="info-box-number">114,381</span>-->
+
+<!--          <div class="progress">-->
+<!--            <div class="progress-bar" style="width: 70%"></div>-->
+<!--          </div>-->
+<!--          <span class="progress-description">-->
+<!--                    70% Increase in 30 Days-->
+<!--                  </span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--      </div>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--      &lt;!&ndash; /.info-box &ndash;&gt;-->
+<!--      <div class="info-box bg-aqua">-->
+<!--        <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>-->
+
+<!--        <div class="info-box-content">-->
+<!--          <span class="info-box-text">Direct Messages</span>-->
+<!--          <span class="info-box-number">163,921</span>-->
+
+<!--          <div class="progress">-->
+<!--            <div class="progress-bar" style="width: 40%"></div>-->
+<!--          </div>-->
+<!--          <span class="progress-description">-->
+<!--                    40% Increase in 30 Days-->
+<!--                  </span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.info-box-content &ndash;&gt;-->
+<!--      </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--  </table>-->
+
+
+
+
+
+
+
+<!--  <div class="col-md-12">-->
+<!--    <div class="col-md-4">-->
+<!--      <div class="nav-tabs-custom">-->
+<!--        <ul class="nav nav-tabs">-->
+<!--          <li class="active"><a href="#tab_12" data-toggle="tab">Preventive Maintenance</a></li>-->
+<!--        </ul>-->
+<!--        <div class="tab-content">-->
+<!--          <div class="box-body">-->
+<!--            <div id='calendar'></div>-->
+<!--            <table aria-describedby="example_info" cellspacing="0"-->
+<!--                   class="table table-striped table-bordered table-hover"-->
+<!--                   role="grid" style="width: 100%;"-->
+<!--                   width="100%">-->
+<!--              <td style="background-color:#ff8000" >Verified</td>-->
+<!--              <td style="background-color:#e600e6">Approved</td>-->
+<!--              <td style="background-color:#ff3300">Work_In_Progrees</td>-->
+<!--              <td style="background-color:#3399ff">take_over</td>-->
+<!--              <td style="background-color:#00cc00">End_Job</td>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--          <div class="box">-->
+<!--            <div >-->
+<!--              <h2 class="box-title"></h2>-->
+
+<!--              <div class="box-tools pull-right">-->
+<!--                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>-->
+<!--                </button>-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">-->
+<!--                    <i class="fa fa-wrench"></i></button>-->
+<!--                  <ul class="dropdown-menu" role="menu">-->
+<!--                    <li><a href="#">Action</a></li>-->
+<!--                    <li><a href="#">Another action</a></li>-->
+<!--                    <li><a href="#">Something else here</a></li>-->
+<!--                    <li class="divider"></li>-->
+<!--                    <li><a href="#">Separated link</a></li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="item active">-->
+<!--              <div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="item active">-->
+<!--              <div>-->
+<!--                &lt;!&ndash;          <canvas id="myChart1" width="2000" height="100"></canvas>&ndash;&gt;-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--<div class="col-md-4">-->
+<!--  <div class="nav-tabs-custom">-->
+<!--    <ul class="nav nav-tabs">-->
+<!--      <li class="active"><a href="#tab_12" data-toggle="tab">Biaya Perbulan</a></li>-->
+<!--    </ul>-->
+<!--    <div class="tab-content">-->
+<!--      <div class="box-body">-->
+<!--        <div id="container_dt" width="30%"  style="height:600px"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</div>-->
+<!--  <div class="col-md-4">-->
+<!--    <div class="nav-tabs-custom">-->
+<!--      <ul class="nav nav-tabs">-->
+<!--        <li class="active"><a href="#tab_12" data-toggle="tab">Pivot Biaya Perbulan</a></li>-->
+<!--      </ul>-->
+<!--      <div class="tab-content">-->
+<!--        <div class="box-body">-->
+<!--          <div id="container_dt1" width="30%"  style="height:600px"></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--  </div>-->
+
+
+
+
+<!--  <p class="admin-message-text text-center" th:utext="${adminMessage}"></p>-->
+
+<!--</div>-->
+
+</body>
+</html>
+<script type="text/javascript">
+$("#tabtwo").dataTable();
+
+anychart.data.loadJsonFile('http://localhost:1111/Cbd', function (data)
+{
+var chart = anychart.bar(data);
+chart.title('Biaya perbulan');
+chart.container('container_dt');
+chart.draw();
+});
+
+anychart.data.loadJsonFile('http://localhost:1111/SumCostByMonth', function (data)
+{
+var chart = anychart.column(data);
+chart.title('Pivot Biaya perbulan');
+chart.container('container_dt1');
+chart.draw();
+});
+
+
+</script>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html layout:decorate="layout2"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta charset="utf-8"/>
+<title>Work Order</title>
+
+</head>
+<body>
+
+<h2>
+Service Request
+<small></small>
+</h2>
+<ol class="breadcrumb">
+<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+<li class="active">Service Request</li>
+</ol>
+</section>
+<div layout:fragment="content">
+<div>
+
+
+
+</div>
+<div class="callout callout" style="color:grey;    height: 450px; background-image: url(dist/img/backgrounds/carr.jpg);" >
+<h1 style="color:white; font-size:80px; padding:167px; padding-left:39px; padding-bottom: 0px;">e-Ticketing Service</h1>
+<p style="color:white; font-size:30px;">Aplikasi Ticketing untuk melaporkan kerusakan peralatan / service peralatan/ penggantian peralatan tanpa perlu melapor pihak maintenance .</p>
+</div>
+
+<form data-toggle="validator" name="form_sc" id="form_sc" method="post" th:object="${sc}">
+
+<div class="col-md-12">
+
+<div >
+<div id="info"></div>
+
+</div>
+
+<div class="col-md-12">
+<table class="table" style="width:2500px">
+<td hidden>
+<label style="font-weight: 100; font-size: 20px;" for="nama">id Work Order</label>
+<input style="     background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;"
+class="form-control" id="id_wo" name="id_wo"
+required="true"
+placeholder="WO-001-MTC"
+type="text" />
+</td>
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">Kode Work Order</label>
+<input style="     background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;"
+class="form-control" id="kode_wo" name="kode_wo"
+required="true"
+placeholder="WO-001-MTC"
+type="text" />
+</td>
+</table>
+<table class="table" style="width:2500px">
+<h2>General</h2>
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">Asset / Equipment</label>
+<input style="     background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;"
+class="form-control" id="asset_name"  name="asset_name"
+required="true"
+placeholder="hand Pallet"
+type="text" />
+</td>
+<td></td>
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">Jenis Pekerjaan</label>
+<select style="    background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;" class="form-control" id="jenis_pekerjaan" name="jenis_pekerjaan"
+required="true" th:field="*{jenis_pekerjaan}">
+<option th:each="type : ${sc}"
+th:text="Perbaikan"
+th:value="'Perbaikan'">Perbaikan
+</option>
+<option th:each="type : ${sc}"
+th:text="Permintaan_Baru"
+th:value="'Permintaan_Baru'">Permintaan Baru
+</option>
+</select>
+</td>
+<td></td>
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">Tanggal Pembuatan</label>
+<input style=" background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;" class="form-control" id="pembuatan" name="pembuatan"
+required="true"
+placeholder="YYYY-DD-MM"
+type="text" />
+</td>
+
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">Lokasi</label>
+<input style=" background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;" class="form-control" id="Lokasi"  name="Lokasi"
+required="true"
+placeholder="Gudang Spare Part"
+type="text" />
+</td>
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">Status Pekerjaan</label>
+<select style="    background-color: antiquewhite;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;" class="form-control" id="status_pekerjaan" name="status_pekerjaan"
+required="true" th:field="*{status_pekerjaan}">
+<option th:each="type : ${sc}"
+th:text="Scheduled"
+th:value="'Scheduled'">Scheduled
+</option>
+
+</select>
+</td>
+
+</table>
+<table class="table" style="width:2500px">
+<td>
+<label style="font-weight: 100; font-size: 20px;" for="nama">uraian</label>
+<textarea style=" background-color: antiquewhite;
+opacity: 1;
+height: 200px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;" class="form-control" id="uraian"  name="uraian"
+th:field="*{uraian}"
+required="true"
+placeholder="Rincian Masalah"
+type="text" />
+</td>
+</table>
+</div>
+
+
+
+
+
+
+<table class="center" style=" margin-left: auto;
+margin-right: auto;" width="100">
+<center>
+<tr>
+<td>
+
+<button class="btn btn-info btn-lg" style="    border-radius: 3px;
+-webkit-box-shadow: none;
+box-shadow: none;
+border: 1px solid transparent;
+width: 262px;
+height: 81px;
+font-size: 40px;
+font-weight: lighter;" type="submit" name="btn_sc"  id="btn_sc" ><b class="glyphicon glyphicon-floppy-disk"></b> Post
+
+</td>
+
+<td>
+
+
+</td>
+</tr>
+</center>
+</table>
+
+</div>
+</form>
+
+
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+<script>
+$('#pembuatan').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+locale: {
+format: 'YYYY-MM-DD'
+}
+});
+// $('#end').daterangepicker({
+// singleDatePicker: true,
+// showDropdowns: true,
+// locale: {
+// format: 'YYYY-MM-DD'
+// }
+// });
+
+
+
+// function hitungAllmtbf()
+// {
+// <!--var uptime    = parseFloat(document.getElementById("uptime").value);-->
+// <!--var QOfTroble = parseFloat(document.getElementById("quantity_troble").value);-->
+// <!--var DT        = parseFloat(document.getElementById("downtime").value);-->
+
+
+// <!--document.getElementById("mtbf").value =uptime/QOfTroble;-->
+// <!--document.getElementById("mttr").value =DT/QOfTroble;-->
+// }
+
+function hitungAlloee()
+{
+var work_time    = parseInt(document.getElementById("work_time").value);
+var Quantity = parseInt(document.getElementById("Quantity").value);
+var cycle_time = parseInt(document.getElementById("cycle_time").value);
+var good_pieces = parseInt(document.getElementById("good_pieces").value);
+
+var breakdown        = parseInt(document.getElementById("breakdown").value);
+var setup        = parseInt(document.getElementById("setup").value);
+
+
+document.getElementById("ar").value =(work_time-(breakdown+setup))/work_time*100;
+document.getElementById("pr").value =(Quantity/work_time*cycle_time)*100;
+document.getElementById("qr").value =(good_pieces / Quantity )* 100;
+
+document.getElementById("logout").onclick = function () {
+location.href = "localhost:1010/logout";
+};
+}
+</script>
